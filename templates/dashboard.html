@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <title>My Health Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <style>
+        .widget {
+            margin-left: 1.5rem;
+        }
+    </style>
 </head>
 <body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <!-- TODO: Navigation bar -->
+</nav>
+
 <div class="container-fluid mt-3">
     <div class="row">
         <div class="col">
@@ -17,51 +27,63 @@
 <!-- Health Widgets -->
 <div class="row text-center">
     <div class="col-md-3">
-        <div class="bg-primary text-white rounded py-4 my-2">
+        <div class="widget bg-primary text-white rounded py-4 my-2">
             <h2>Blood Type</h2>
             <!-- TODO: Replace with real value-->
             <p class="display-4">O-</p>
         </div>
-        <div class="bg-primary text-white rounded py-4 my-2">
+        <div class="widget bg-primary text-white rounded py-4 my-2">
             <h2>Heart Rate</h2>
             <!-- TODO: Replace with real value-->
             <p class="display-4">92 bpm</p>
         </div>
-        <div class="bg-primary text-white rounded py-4 my-2">
+        <div class="widget bg-primary text-white rounded py-4 my-2">
             <h2>Blood Cholesterol</h2>
             <!-- TODO: Replace with real value-->
             <p class="display-4">195 mg/dL</p>
         </div>
-        <div class="bg-primary text-white rounded py-4 my-2">
+        <div class="widget bg-primary text-white rounded py-4 my-2">
             <h2>Height</h2>
             <!-- TODO: Replace with real value-->
             <p class="display-4">5'9"</p>
         </div>
     </div>
     <div class="col-md-3">
-        <div class="bg-primary text-white rounded py-4 my-2">
+        <div class="widget bg-primary text-white rounded py-4 my-2">
             <h2>Age</h2>
             <!-- TODO: Replace with real value-->
             <p class="display-4">30</p>
         </div>
-        <div class="bg-primary text-white rounded py-4 my-2">
+        <div class="widget bg-primary text-white rounded py-4 my-2">
             <h2>Body Temperature</h2>
             <!-- TODO: Replace with real value-->
             <p class="display-4">98.1 F</p>
         </div>
-        <div class="bg-primary text-white rounded py-4 my-2">
+        <div class="widget bg-primary text-white rounded py-4 my-2">
             <h2>Blood Glucose</h2>
             <!-- TODO: Replace with real value-->
             <p class="display-4">167 mg/dL</p>
         </div>
-        <div class="bg-primary text-white rounded py-4 my-2">
+        <div class="widget bg-primary text-white rounded py-4 my-2">
             <h2>Weight</h2>
             <!-- TODO: Replace with real value-->
             <p class="display-4">165 lbs</p>
         </div>
     </div>
+    <!-- Graph Section -->
+    <div class="col-md-6 my-2">
+        <div class="card">
+            <div class="card-header">
+                <h2>Heart Rate Over Time</h2>
+            </div>
+            <div class="card-body">
+                <canvas id="heartRateGraph"></canvas>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>
