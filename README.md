@@ -1,6 +1,7 @@
 # Team: Vitality
 Jason Hertzog's Azalea Health Hackathon Project 2023
 - https://knowledge.azaleahealth.com/2023-azalea-hackathon
+- https://dev.azaleahealth.com/overview/start#:~:text=start%20making%20requests.-,Accessing%20Resources,-To%20access%20FHIR
 ![Criteria](extra/gradingCriteria.png)
 
 # Resources
@@ -20,3 +21,6 @@ Jason Hertzog's Azalea Health Hackathon Project 2023
 ## Examples
 
 - (Requires Docker, so probably won't use it) https://community.intersystems.com/post/simple-example-fhir-client-python
+
+# Task Board
+- https://jasonhertzog.atlassian.net/jira/software/projects/KAN/boards/1
