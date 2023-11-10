@@ -2,10 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Vitality Dashboard</title>
+    <title>My Health Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
 </head>
 <body>
+<div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col">
+            <h1 class="display-4">My Health Dashboard</h1>
+        </div>
+    </div>
+</div>
 
+<!-- Health Widgets -->
+<div class="row text-center">
+    <div class="col-md-3">
+        <div class="bg-primary text-white rounded py-4 my-2">
+            <h2>Blood Type</h2>
+            <!-- TODO: Replace with real value-->
+            <p class="display-4">O-</p>
+        </div>
+        <div class="bg-primary text-white rounded py-4 my-2">
+            <h2>Heart Rate</h2>
+            <!-- TODO: Replace with real value-->
+            <p class="display-4">92 bpm</p>
+        </div>
+        <div class="bg-primary text-white rounded py-4 my-2">
+            <h2>Blood Cholesterol</h2>
+            <!-- TODO: Replace with real value-->
+            <p class="display-4">195 mg/dL</p>
+        </div>
+        <div class="bg-primary text-white rounded py-4 my-2">
+            <h2>Height</h2>
+            <!-- TODO: Replace with real value-->
+            <p class="display-4">5'9"</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="bg-primary text-white rounded py-4 my-2">
+            <h2>Age</h2>
+            <!-- TODO: Replace with real value-->
+            <p class="display-4">30</p>
+        </div>
+        <div class="bg-primary text-white rounded py-4 my-2">
+            <h2>Body Temperature</h2>
+            <!-- TODO: Replace with real value-->
+            <p class="display-4">98.1 F</p>
+        </div>
+        <div class="bg-primary text-white rounded py-4 my-2">
+            <h2>Blood Glucose</h2>
+            <!-- TODO: Replace with real value-->
+            <p class="display-4">167 mg/dL</p>
+        </div>
+        <div class="bg-primary text-white rounded py-4 my-2">
+            <h2>Weight</h2>
+            <!-- TODO: Replace with real value-->
+            <p class="display-4">165 lbs</p>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>
