@@ -6,6 +6,13 @@ app = Flask(__name__)
 
 
 # Patient ID: 392648 for testing
+# Azalea Judges, your auth.json should be formatted like so:
+'''
+{
+  "Authorization": String,
+  "FhirServer": String
+}
+'''
 
 @app.route('/patient/<int:patient_id>')
 def patient(patient_id):
@@ -44,7 +51,7 @@ def dashboard():
 
 @app.route('/get_patient_data/<patient_id>')
 def get_patient_data(patient_id):
-    fhir_server = 'https://app.azaleahealth.com/fhir/R4/sandbox'
+    fhir_server = helpers.load_fhir_server()
     headers = {
         "Authorization": helpers.load_auth_token(),
     }
