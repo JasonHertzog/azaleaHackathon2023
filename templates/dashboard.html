@@ -1,0 +1,54 @@
+<!-- No longer in use, I pivoted to a template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Health Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <style>
+        .widget {
+            margin-left: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <!-- TODO: Navigation bar -->
+</nav>
+
+<div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col">
+            <h1 class="display-4">My Health Dashboard</h1>
+        </div>
+    </div>
+</div>
+
+<!-- Health Widgets -->
+<div class="row text-center">
+    <div class="col-md-3">
+        <div id="patientName" class="widget bg-primary text-white rounded py-4 my-2">
+            <h2>Name</h2>
+            <!-- TODO: Replace with real value-->
+            <p class="display-4">Fetching...</p>
+        </div>
+    </div>
+</div>
+
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script>
+        function fetchPatientData(patientId) {
+            fetch(`/get_patient_data/${patientId}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('patientName').innerHTML = '<h2>Name</h2><p class="display-4">' + data.name[0].text + '</p>';
+                })
+                .catch(error => console.log(error));
+        }
+
+        fetchPatientData('362496'); <!-- this is one of the patient ids -->
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
